@@ -1,0 +1,4 @@
+{"id": "case_001", "input": {"contract": "data/c001.pdf", "invoice": "data/i001.pdf"}, "expected": {"vendor": "Lumen Studio LLC", "total": 4500.00, "deliverable_count": 3, "is_exception": false}, "tags": ["digital"]}
+{"id": "case_002", "input": {"contract": "data/c002.pdf", "invoice": "data/i002.pdf"}, "expected": {"vendor": "Ava Reyes", "total": 1250.00, "deliverable_count": 2, "is_exception": true}, "tags": ["scanned", "rate_in_words"]}
+{"id": "case_003", "input": {"contract": "data/c003.pdf", "invoice": "data/i003.pdf"}, "expected": {"vendor": "Northside Creative", "total": 9800.00, "deliverable_count": 6, "is_exception": true}, "tags": ["bundled_invoice"]}
+{"id": "case_004", "input": {"contract": "data/c004.pdf", "invoice": "data/i004.pdf"}, "expected": {"vendor": "Mira Chen", "total": 2000.00, "deliverable_count": 1, "is_exception": false}, "tags": ["digital"]}
