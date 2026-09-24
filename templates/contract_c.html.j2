@@ -1,0 +1,31 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+@page { size: Letter; margin: 1in 0.9in; }
+body { font-family: Georgia, serif; font-size: 11pt; color: #222; }
+.cover { text-align: center; padding-top: 80pt; page-break-after: always; }
+.cover .brand { font-size: 9pt; letter-spacing: 0.3em; text-transform: uppercase; color: #888; }
+.cover h1 { font-size: 24pt; margin: 20pt 0 8pt; font-weight: normal; }
+.cover .party { font-size: 13pt; margin-top: 30pt; }
+.cover .meta { margin-top: 60pt; font-size: 9.5pt; color: #777; line-height: 1.9; }
+h2 { font-size: 10pt; text-transform: uppercase; letter-spacing: 0.1em; color: #888; margin: 22pt 0 6pt; }
+.sched { width: 100%; border-collapse: collapse; margin-top: 4pt; }
+.sched td { padding: 8pt 0; border-bottom: 1px dotted #bbb; }
+.sched td.q { text-align: right; width: 60px; }
+p { line-height: 1.7; }
+</style></head><body>
+<div class="cover">
+  <div class="brand">Medicube US</div>
+  <h1>Creator Partnership</h1>
+  <div class="party">{{ contract.creator_name }}</div>
+  <div class="meta">{{ contract.contract_id }}<br>Effective {{ contract.usage_window_start|pretty_date }}<br>Net {{ contract.payment_terms_days }}</div>
+</div>
+<h2>Schedule of Deliverables</h2>
+<table class="sched">
+{% for d in contract.deliverables %}
+<tr><td>{{ d.type|replace("_", " ")|title }}</td><td class="q">{{ d.count }}</td></tr>
+{% endfor %}
+</table>
+<h2>Fee</h2>
+<p>{% if render.rate_in_words %}The total fee payable under this agreement is {{ contract.rate_usd|in_words }}.{% else %}The total fee payable under this agreement is {{ contract.rate_usd|money }}.{% endif %} Payment is due Net {{ contract.payment_terms_days }} following receipt of a conforming invoice.</p>
+<h2>Usage</h2>
+<p>Rights are granted for the period {{ contract.usage_window_start|pretty_date }} through {{ contract.usage_window_end|pretty_date }}. Invoices submitted more than {{ contract.payment_terms_days }} days after the close of this period may be rejected.</p>
+</body></html>

@@ -1,0 +1,69 @@
+{
+  "case_id": "case_001",
+  "defect": "duplicate_invoice",
+  "contract": {
+    "creator_name": "Priya Raman",
+    "contract_id": "MC-2026-7795",
+    "rate_usd": 6000.0,
+    "deliverables": [
+      {
+        "type": "static_post",
+        "count": 1
+      },
+      {
+        "type": "ugc_video",
+        "count": 1
+      },
+      {
+        "type": "reel",
+        "count": 2
+      }
+    ],
+    "deliverable_count": 4,
+    "usage_window_start": "2026-02-27",
+    "usage_window_end": "2026-08-26",
+    "payment_terms_days": 45
+  },
+  "invoice": {
+    "vendor_name": "Priya Raman",
+    "invoice_number": "SM-890",
+    "invoice_date": "2026-03-12",
+    "contract_reference": "MC-2026-7795",
+    "line_items": [
+      {
+        "description": "Static in-feed post",
+        "quantity": 1,
+        "unit_price": 1000.0,
+        "amount": 1000.0
+      },
+      {
+        "description": "UGC video asset",
+        "quantity": 1,
+        "unit_price": 2000.0,
+        "amount": 2000.0
+      },
+      {
+        "description": "Instagram reel",
+        "quantity": 2,
+        "unit_price": 1500.0,
+        "amount": 3000.0
+      }
+    ],
+    "total_usd": 6000.0
+  },
+  "truth": {
+    "is_exception": true,
+    "exception_type": "duplicate_invoice",
+    "expected_findings": [
+      "duplicate_invoice"
+    ],
+    "duplicate_of": "case_025"
+  },
+  "render": {
+    "contract_layout": "contract_b",
+    "invoice_layout": "invoice_a",
+    "scanned": true,
+    "rate_in_words": false
+  },
+  "split": "test"
+}

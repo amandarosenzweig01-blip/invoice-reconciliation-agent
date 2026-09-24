@@ -1,0 +1,31 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+@page { size: Letter; margin: 0.9in 0.85in; }
+body { font-family: "Times New Roman", Georgia, serif; font-size: 11.5pt; line-height: 1.55; color: #111; }
+h1 { font-size: 13pt; text-align: center; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 4pt; }
+.sub { text-align: center; font-size: 9.5pt; color: #555; margin-bottom: 26pt; }
+h2 { font-size: 11pt; margin: 18pt 0 5pt; }
+ul { margin: 6pt 0 6pt 18pt; }
+.sig { margin-top: 44pt; border-top: 1px solid #333; width: 240px; padding-top: 5pt; font-size: 9.5pt; }
+</style></head><body>
+<h1>Creator Partnership Agreement</h1>
+<div class="sub">Agreement No. {{ contract.contract_id }}</div>
+<p>This Creator Partnership Agreement is entered into between <strong>Medicube US, Inc.</strong> (the "Brand") and <strong>{{ contract.creator_name }}</strong> (the "Creator"), effective {{ contract.usage_window_start|pretty_date }}.</p>
+<h2>1. Deliverables</h2>
+<p>The Creator shall produce and deliver the following:</p>
+<ul>
+{% for d in contract.deliverables %}
+  <li>{{ d.count }} &times; {{ d.type|replace("_", " ")|title }}</li>
+{% endfor %}
+</ul>
+<h2>2. Compensation</h2>
+{% if render.rate_in_words %}
+<p>In consideration of the Deliverables, the Brand shall pay the Creator a total fee of {{ contract.rate_usd|in_words }}, payable in full upon satisfactory completion and receipt of a valid invoice.</p>
+{% else %}
+<p>In consideration of the Deliverables, the Brand shall pay the Creator a total fee of {{ contract.rate_usd|money }}, payable in full upon satisfactory completion and receipt of a valid invoice.</p>
+{% endif %}
+<h2>3. Usage Window</h2>
+<p>The Brand is granted usage rights from {{ contract.usage_window_start|pretty_date }} through {{ contract.usage_window_end|pretty_date }}.</p>
+<h2>4. Payment Terms</h2>
+<p>Invoices shall be paid Net {{ contract.payment_terms_days }} from receipt. Invoices must be submitted no later than {{ contract.payment_terms_days }} days following the close of the Usage Window.</p>
+<div class="sig">{{ contract.creator_name }}, Creator</div>
+</body></html>

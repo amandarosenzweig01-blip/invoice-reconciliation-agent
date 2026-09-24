@@ -1,0 +1,71 @@
+{
+  "case_id": "case_004",
+  "defect": "bundled_invoice",
+  "contract": {
+    "creator_name": "Hana Park",
+    "contract_id": "MC-2026-4449",
+    "rate_usd": 4000.0,
+    "deliverables": [
+      {
+        "type": "reel",
+        "count": 2
+      },
+      {
+        "type": "static_post",
+        "count": 1
+      }
+    ],
+    "deliverable_count": 3,
+    "usage_window_start": "2026-01-25",
+    "usage_window_end": "2026-07-24",
+    "payment_terms_days": 45
+  },
+  "invoice": {
+    "vendor_name": "Hana Park",
+    "invoice_number": "HP-766",
+    "invoice_date": "2026-02-06",
+    "contract_reference": "MC-2026-4449, MC-2026-5954",
+    "line_items": [
+      {
+        "description": "Instagram reel",
+        "quantity": 2,
+        "unit_price": 1500.0,
+        "amount": 3000.0
+      },
+      {
+        "description": "Static in-feed post",
+        "quantity": 1,
+        "unit_price": 1000.0,
+        "amount": 1000.0
+      },
+      {
+        "description": "Instagram reel (ref MC-2026-5954)",
+        "quantity": 3,
+        "unit_price": 1500.0,
+        "amount": 4500.0
+      },
+      {
+        "description": "UGC video asset (ref MC-2026-5954)",
+        "quantity": 1,
+        "unit_price": 2000.0,
+        "amount": 2000.0
+      }
+    ],
+    "total_usd": 10500.0
+  },
+  "truth": {
+    "is_exception": true,
+    "exception_type": "bundled_invoice",
+    "expected_findings": [
+      "scope",
+      "rate_overcharge"
+    ]
+  },
+  "render": {
+    "contract_layout": "contract_c",
+    "invoice_layout": "invoice_c",
+    "scanned": false,
+    "rate_in_words": false
+  },
+  "split": "dev"
+}

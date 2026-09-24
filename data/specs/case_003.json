@@ -1,0 +1,56 @@
+{
+  "case_id": "case_003",
+  "defect": "missing_reference",
+  "contract": {
+    "creator_name": "Tessa Lindqvist",
+    "contract_id": "MC-2026-2788",
+    "rate_usd": 8500.0,
+    "deliverables": [
+      {
+        "type": "reel",
+        "count": 3
+      },
+      {
+        "type": "ugc_video",
+        "count": 2
+      }
+    ],
+    "deliverable_count": 5,
+    "usage_window_start": "2026-04-07",
+    "usage_window_end": "2026-10-04",
+    "payment_terms_days": 30
+  },
+  "invoice": {
+    "vendor_name": "Tessa Lindqvist",
+    "invoice_number": "TL-916",
+    "invoice_date": "2026-04-27",
+    "contract_reference": null,
+    "line_items": [
+      {
+        "description": "Instagram reel",
+        "quantity": 3,
+        "unit_price": 1500.0,
+        "amount": 4500.0
+      },
+      {
+        "description": "UGC video asset",
+        "quantity": 2,
+        "unit_price": 2000.0,
+        "amount": 4000.0
+      }
+    ],
+    "total_usd": 8500.0
+  },
+  "truth": {
+    "is_exception": false,
+    "exception_type": null,
+    "expected_findings": []
+  },
+  "render": {
+    "contract_layout": "contract_b",
+    "invoice_layout": "invoice_b",
+    "scanned": false,
+    "rate_in_words": false
+  },
+  "split": "test"
+}

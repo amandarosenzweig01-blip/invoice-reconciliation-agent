@@ -1,0 +1,46 @@
+{
+  "case_id": "case_005",
+  "defect": "clean",
+  "contract": {
+    "creator_name": "Imani Brooks",
+    "contract_id": "MC-2026-5254",
+    "rate_usd": 4500.0,
+    "deliverables": [
+      {
+        "type": "reel",
+        "count": 3
+      }
+    ],
+    "deliverable_count": 3,
+    "usage_window_start": "2026-01-23",
+    "usage_window_end": "2026-04-23",
+    "payment_terms_days": 60
+  },
+  "invoice": {
+    "vendor_name": "Imani Brooks",
+    "invoice_number": "IB-674",
+    "invoice_date": "2026-02-09",
+    "contract_reference": "MC-2026-5254",
+    "line_items": [
+      {
+        "description": "Instagram reel",
+        "quantity": 3,
+        "unit_price": 1500.0,
+        "amount": 4500.0
+      }
+    ],
+    "total_usd": 4500.0
+  },
+  "truth": {
+    "is_exception": false,
+    "exception_type": null,
+    "expected_findings": []
+  },
+  "render": {
+    "contract_layout": "contract_a",
+    "invoice_layout": "invoice_a",
+    "scanned": false,
+    "rate_in_words": false
+  },
+  "split": "test"
+}

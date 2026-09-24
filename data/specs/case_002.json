@@ -1,0 +1,46 @@
+{
+  "case_id": "case_002",
+  "defect": "clean",
+  "contract": {
+    "creator_name": "Ava Reyes",
+    "contract_id": "MC-2026-6730",
+    "rate_usd": 4000.0,
+    "deliverables": [
+      {
+        "type": "ugc_video",
+        "count": 2
+      }
+    ],
+    "deliverable_count": 2,
+    "usage_window_start": "2026-02-18",
+    "usage_window_end": "2026-06-18",
+    "payment_terms_days": 60
+  },
+  "invoice": {
+    "vendor_name": "Ava Reyes",
+    "invoice_number": "AR-691",
+    "invoice_date": "2026-03-26",
+    "contract_reference": "MC-2026-6730",
+    "line_items": [
+      {
+        "description": "UGC video asset",
+        "quantity": 2,
+        "unit_price": 2000.0,
+        "amount": 4000.0
+      }
+    ],
+    "total_usd": 4000.0
+  },
+  "truth": {
+    "is_exception": false,
+    "exception_type": null,
+    "expected_findings": []
+  },
+  "render": {
+    "contract_layout": "contract_a",
+    "invoice_layout": "invoice_b",
+    "scanned": false,
+    "rate_in_words": false
+  },
+  "split": "test"
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+@page { size: Letter; margin: 0.6in; }
+body { font-family: Arial, Helvetica, sans-serif; font-size: 9.5pt; color: #222; }
+.band { background: #24303d; color: #fff; padding: 16pt 18pt; margin-bottom: 0; }
+.band .co { font-size: 15pt; font-weight: 700; letter-spacing: -0.01em; }
+.band .tag { font-size: 8pt; opacity: 0.75; margin-top: 2pt; letter-spacing: 0.1em; text-transform: uppercase; }
+.meta { display: flex; background: #f4f6f8; padding: 12pt 18pt; margin-bottom: 20pt; font-size: 8.5pt; }
+.meta div { margin-right: 34pt; }
+.meta .lbl { color: #7a8794; text-transform: uppercase; letter-spacing: 0.07em; font-size: 7.5pt; }
+.meta .val { font-weight: 700; font-size: 9.5pt; margin-top: 2pt; }
+.body { padding: 0 18pt; }
+table { width: 100%; border-collapse: collapse; }
+th { background: #eef1f4; text-align: left; padding: 7pt 8pt; font-size: 8pt; text-transform: uppercase; letter-spacing: 0.06em; color: #55626f; }
+td { padding: 8pt; border-bottom: 1px solid #edf0f2; }
+td.n, th.n { text-align: right; }
+.sums { width: 260px; margin-left: auto; margin-top: 12pt; font-size: 9.5pt; }
+.sums tr td { border: none; padding: 4pt 8pt; }
+.sums tr.grand td { border-top: 2px solid #24303d; font-weight: 700; font-size: 12pt; padding-top: 8pt; }
+.remit { margin-top: 30pt; background: #f4f6f8; padding: 12pt 18pt; font-size: 8.5pt; color: #55626f; line-height: 1.7; }
+</style></head><body>
+<div class="band"><div class="co">{{ invoice.vendor_name }}</div><div class="tag">Talent &amp; Content Partnerships</div></div>
+<div class="meta">
+  <div><div class="lbl">Invoice</div><div class="val">{{ invoice.invoice_number }}</div></div>
+  <div><div class="lbl">Date</div><div class="val">{{ invoice.invoice_date|pretty_date }}</div></div>
+  <div><div class="lbl">Reference</div><div class="val">{{ invoice.contract_reference or "—" }}</div></div>
+  {% if invoice.billing_on_behalf_of %}<div><div class="lbl">Talent</div><div class="val">{{ invoice.billing_on_behalf_of }}</div></div>{% endif %}
+</div>
+<div class="body">
+<table><thead><tr><th>Description</th><th class="n">Qty</th><th class="n">Unit</th><th class="n">Amount</th></tr></thead><tbody>
+{% for li in invoice.line_items %}
+<tr><td>{{ li.description }}</td><td class="n">{{ li.quantity }}</td><td class="n">{{ li.unit_price|money }}</td><td class="n">{{ li.amount|money }}</td></tr>
+{% endfor %}
+</tbody></table>
+<table class="sums"><tr class="grand"><td>Total Due</td><td class="n">{{ invoice.total_usd|money }}</td></tr></table>
+</div>
+<div class="remit"><strong>Remittance</strong><br>Bill to: Medicube US, Inc., Accounts Payable. Reference the invoice number on all payments. Queries to partnerships billing within 10 business days.</div>
+</body></html>

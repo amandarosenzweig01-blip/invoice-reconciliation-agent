@@ -1,0 +1,38 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+@page { size: Letter; margin: 0.7in; }
+body { font-family: Helvetica, Arial, sans-serif; font-size: 10pt; color: #181818; }
+.top { display: flex; justify-content: space-between; border-bottom: 2px solid #181818; padding-bottom: 14pt; margin-bottom: 22pt; }
+.from { font-size: 11pt; font-weight: 700; }
+.from .obo { font-weight: 400; font-size: 9pt; color: #666; margin-top: 3pt; }
+.right { text-align: right; }
+.right h1 { font-size: 20pt; margin: 0 0 6pt; letter-spacing: 0.06em; }
+.right div { font-size: 9pt; color: #555; line-height: 1.6; }
+.billto { margin-bottom: 18pt; font-size: 9.5pt; }
+.billto .lbl { color: #888; font-size: 8.5pt; text-transform: uppercase; letter-spacing: 0.08em; }
+table { width: 100%; border-collapse: collapse; }
+th { text-align: left; font-size: 8.5pt; text-transform: uppercase; letter-spacing: 0.06em; color: #666; border-bottom: 1px solid #ccc; padding: 6pt 4pt; }
+td { padding: 9pt 4pt; border-bottom: 1px solid #f0f0f0; }
+td.n, th.n { text-align: right; }
+.total { margin-top: 14pt; text-align: right; }
+.total .lbl { font-size: 9pt; color: #666; }
+.total .amt { font-size: 17pt; font-weight: 700; }
+.foot { margin-top: 34pt; font-size: 8.5pt; color: #888; border-top: 1px solid #eee; padding-top: 10pt; }
+</style></head><body>
+<div class="top">
+  <div class="from">{{ invoice.vendor_name }}
+    {% if invoice.billing_on_behalf_of %}<div class="obo">on behalf of {{ invoice.billing_on_behalf_of }}</div>{% endif %}
+  </div>
+  <div class="right"><h1>INVOICE</h1>
+    <div>No. {{ invoice.invoice_number }}<br>{{ invoice.invoice_date|pretty_date }}
+    {% if invoice.contract_reference %}<br>Ref: {{ invoice.contract_reference }}{% endif %}</div>
+  </div>
+</div>
+<div class="billto"><div class="lbl">Bill To</div>Medicube US, Inc.<br>Accounts Payable</div>
+<table><thead><tr><th>Description</th><th class="n">Qty</th><th class="n">Rate</th><th class="n">Amount</th></tr></thead><tbody>
+{% for li in invoice.line_items %}
+<tr><td>{{ li.description }}</td><td class="n">{{ li.quantity }}</td><td class="n">{{ li.unit_price|money }}</td><td class="n">{{ li.amount|money }}</td></tr>
+{% endfor %}
+</tbody></table>
+<div class="total"><span class="lbl">Total Due&nbsp;&nbsp;</span><span class="amt">{{ invoice.total_usd|money }}</span></div>
+<div class="foot">Payment due per contract terms. Questions regarding this invoice may be directed to the sender.</div>
+</body></html>

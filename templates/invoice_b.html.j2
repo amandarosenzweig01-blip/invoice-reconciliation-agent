@@ -1,0 +1,32 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+@page { size: Letter; margin: 1.1in 1in; }
+body { font-family: "Courier New", monospace; font-size: 10.5pt; color: #000; line-height: 1.7; }
+h1 { font-size: 12pt; letter-spacing: 0.2em; margin: 0 0 24pt; }
+.kv { margin-bottom: 20pt; }
+.kv div { margin-bottom: 2pt; }
+table { width: 100%; border-collapse: collapse; margin: 16pt 0; }
+td { padding: 4pt 0; }
+td.n { text-align: right; }
+.rule { border-top: 1px solid #000; margin: 10pt 0; }
+.tot { font-weight: bold; }
+.note { margin-top: 30pt; font-size: 9pt; }
+</style></head><body>
+<h1>INVOICE</h1>
+<div class="kv">
+<div>FROM:    {{ invoice.vendor_name }}</div>
+{% if invoice.billing_on_behalf_of %}<div>FOR:     {{ invoice.billing_on_behalf_of }}</div>{% endif %}
+<div>TO:      Medicube US, Inc.</div>
+<div>NUMBER:  {{ invoice.invoice_number }}</div>
+<div>DATE:    {{ invoice.invoice_date|pretty_date }}</div>
+{% if invoice.contract_reference %}<div>CONTRACT: {{ invoice.contract_reference }}</div>{% endif %}
+</div>
+<div class="rule"></div>
+<table>
+{% for li in invoice.line_items %}
+<tr><td>{{ li.description }} (x{{ li.quantity }})</td><td class="n">{{ li.amount|money }}</td></tr>
+{% endfor %}
+</table>
+<div class="rule"></div>
+<table><tr class="tot"><td>TOTAL DUE</td><td class="n">{{ invoice.total_usd|money }}</td></tr></table>
+<div class="note">Thank you. Please remit per agreed terms.</div>
+</body></html>

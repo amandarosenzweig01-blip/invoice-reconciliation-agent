@@ -1,0 +1,46 @@
+{
+  "case_id": "case_006",
+  "defect": "missing_reference",
+  "contract": {
+    "creator_name": "Sofia Marchetti",
+    "contract_id": "MC-2026-2775",
+    "rate_usd": 2000.0,
+    "deliverables": [
+      {
+        "type": "ugc_video",
+        "count": 1
+      }
+    ],
+    "deliverable_count": 1,
+    "usage_window_start": "2026-03-31",
+    "usage_window_end": "2026-07-29",
+    "payment_terms_days": 45
+  },
+  "invoice": {
+    "vendor_name": "Sofia Marchetti",
+    "invoice_number": "SM-562",
+    "invoice_date": "2026-05-02",
+    "contract_reference": null,
+    "line_items": [
+      {
+        "description": "UGC video asset",
+        "quantity": 1,
+        "unit_price": 2000.0,
+        "amount": 2000.0
+      }
+    ],
+    "total_usd": 2000.0
+  },
+  "truth": {
+    "is_exception": false,
+    "exception_type": null,
+    "expected_findings": []
+  },
+  "render": {
+    "contract_layout": "contract_b",
+    "invoice_layout": "invoice_b",
+    "scanned": false,
+    "rate_in_words": false
+  },
+  "split": "test"
+}
