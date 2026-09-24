@@ -1,0 +1,198 @@
+{
+  "run_name": "reconciliation",
+  "variant": "extraction-only",
+  "notes": "sonnet-5, text and vision router, no reconciliation",
+  "started_utc": "2026-09-24T18:50:36.956277+00:00",
+  "case_count": 6,
+  "error_count": 0,
+  "python": "3.11.4",
+  "rows_csv": "evals/results/reconciliation__extraction-only__20260924T185036Z.csv",
+  "rows": [
+    {
+      "case_id": "case_001",
+      "tags": [
+        "duplicate_invoice",
+        "test",
+        "scanned"
+      ],
+      "expected": {
+        "creator_name": "Priya Raman",
+        "contract_rate_usd": 6000.0,
+        "invoice_total_usd": 6000.0,
+        "deliverable_count_contracted": 4,
+        "deliverable_count_invoiced": 4,
+        "is_exception": true,
+        "exception_type": "duplicate_invoice"
+      },
+      "predicted": {
+        "creator_name": "Priya Raman",
+        "contract_rate_usd": 6000.0,
+        "invoice_total_usd": 6000.0,
+        "deliverable_count_contracted": 4,
+        "deliverable_count_invoiced": 4,
+        "is_exception": false,
+        "exception_type": null,
+        "_path": "text/vision",
+        "_grounding_rate": 1.0
+      },
+      "latency_s": 6.7331,
+      "cost_usd": 0.017924,
+      "error": null
+    },
+    {
+      "case_id": "case_002",
+      "tags": [
+        "clean",
+        "test",
+        "digital"
+      ],
+      "expected": {
+        "creator_name": "Ava Reyes",
+        "contract_rate_usd": 4000.0,
+        "invoice_total_usd": 4000.0,
+        "deliverable_count_contracted": 2,
+        "deliverable_count_invoiced": 2,
+        "is_exception": false,
+        "exception_type": null
+      },
+      "predicted": {
+        "creator_name": "Ava Reyes",
+        "contract_rate_usd": 4000.0,
+        "invoice_total_usd": 4000.0,
+        "deliverable_count_contracted": 2,
+        "deliverable_count_invoiced": 2,
+        "is_exception": false,
+        "exception_type": null,
+        "_path": "text/text",
+        "_grounding_rate": 1.0
+      },
+      "latency_s": 7.3689,
+      "cost_usd": 0.01139,
+      "error": null
+    },
+    {
+      "case_id": "case_003",
+      "tags": [
+        "missing_reference",
+        "test",
+        "digital"
+      ],
+      "expected": {
+        "creator_name": "Tessa Lindqvist",
+        "contract_rate_usd": 8500.0,
+        "invoice_total_usd": 8500.0,
+        "deliverable_count_contracted": 5,
+        "deliverable_count_invoiced": 5,
+        "is_exception": false,
+        "exception_type": null
+      },
+      "predicted": {
+        "creator_name": "Tessa Lindqvist",
+        "contract_rate_usd": 8500.0,
+        "invoice_total_usd": 8500.0,
+        "deliverable_count_contracted": 5,
+        "deliverable_count_invoiced": 5,
+        "is_exception": false,
+        "exception_type": null,
+        "_path": "text/text",
+        "_grounding_rate": 1.0
+      },
+      "latency_s": 6.0449,
+      "cost_usd": 0.012029999999999999,
+      "error": null
+    },
+    {
+      "case_id": "case_004",
+      "tags": [
+        "bundled_invoice",
+        "dev",
+        "digital"
+      ],
+      "expected": {
+        "creator_name": "Hana Park",
+        "contract_rate_usd": 4000.0,
+        "invoice_total_usd": 10500.0,
+        "deliverable_count_contracted": 3,
+        "deliverable_count_invoiced": 7,
+        "is_exception": true,
+        "exception_type": "bundled_invoice"
+      },
+      "predicted": {
+        "creator_name": "Hana Park",
+        "contract_rate_usd": 4000.0,
+        "invoice_total_usd": 10500.0,
+        "deliverable_count_contracted": 3,
+        "deliverable_count_invoiced": 7,
+        "is_exception": false,
+        "exception_type": null,
+        "_path": "text/text",
+        "_grounding_rate": 1.0
+      },
+      "latency_s": 7.3727,
+      "cost_usd": 0.013448,
+      "error": null
+    },
+    {
+      "case_id": "case_005",
+      "tags": [
+        "clean",
+        "test",
+        "digital"
+      ],
+      "expected": {
+        "creator_name": "Imani Brooks",
+        "contract_rate_usd": 4500.0,
+        "invoice_total_usd": 4500.0,
+        "deliverable_count_contracted": 3,
+        "deliverable_count_invoiced": 3,
+        "is_exception": false,
+        "exception_type": null
+      },
+      "predicted": {
+        "creator_name": "Imani Brooks",
+        "contract_rate_usd": 4500.0,
+        "invoice_total_usd": 4500.0,
+        "deliverable_count_contracted": 3,
+        "deliverable_count_invoiced": 3,
+        "is_exception": false,
+        "exception_type": null,
+        "_path": "text/text",
+        "_grounding_rate": 1.0
+      },
+      "latency_s": 5.0171,
+      "cost_usd": 0.011662,
+      "error": null
+    },
+    {
+      "case_id": "case_006",
+      "tags": [
+        "missing_reference",
+        "test",
+        "digital"
+      ],
+      "expected": {
+        "creator_name": "Sofia Marchetti",
+        "contract_rate_usd": 2000.0,
+        "invoice_total_usd": 2000.0,
+        "deliverable_count_contracted": 1,
+        "deliverable_count_invoiced": 1,
+        "is_exception": false,
+        "exception_type": null
+      },
+      "predicted": {
+        "creator_name": "Sofia Marchetti",
+        "contract_rate_usd": 2000.0,
+        "invoice_total_usd": 2000.0,
+        "deliverable_count_contracted": 1,
+        "deliverable_count_invoiced": 1,
+        "is_exception": false,
+        "exception_type": null,
+        "_path": "text/text",
+        "_grounding_rate": 1.0
+      },
+      "latency_s": 5.4284,
+      "cost_usd": 0.01134,
+      "error": null
+    }
+  ]
+}
