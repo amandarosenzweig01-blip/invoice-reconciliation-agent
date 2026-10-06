@@ -1,8 +1,7 @@
 """Grounding: a confidence signal that is not the model's own opinion.
 
-The obvious way to get confidence is to ask the model for it. Do not. Self
-reported confidence from a language model is poorly calibrated, and an
-interviewer who knows that will press on it.
+The obvious way to get confidence is to ask the model for it. Self reported
+confidence from a language model is poorly calibrated, so this does not.
 
 Grounding asks a different question: does this extracted value literally
 appear in the document? It is cruder and it is checkable, which is the
@@ -62,8 +61,8 @@ def grounding_rate(model: Any, fields: list[str], source_text: str) -> tuple[flo
     """Share of non-null checked fields that appear in the source.
 
     Returns (rate, ungrounded_field_names). Rate is None when nothing could
-    be checked, which is the vision path. Week 3's escalation gate treats
-    None as "cannot vouch for this" rather than as zero.
+    be checked, which is the vision path. The escalation gate treats None as
+    "cannot vouch for this" rather than as zero.
     """
     checks = {f: grounded(getattr(model, f, None), source_text) for f in fields}
     applicable = {f: v for f, v in checks.items() if v is not None}

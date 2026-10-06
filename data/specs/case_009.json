@@ -1,0 +1,58 @@
+{
+  "case_id": "case_009",
+  "defect": "rate_overcharge",
+  "contract": {
+    "creator_name": "Jia Wen Lim",
+    "contract_id": "MC-2026-8093",
+    "rate_usd": 7000.0,
+    "deliverables": [
+      {
+        "type": "reel",
+        "count": 2
+      },
+      {
+        "type": "ugc_video",
+        "count": 2
+      }
+    ],
+    "deliverable_count": 4,
+    "usage_window_start": "2026-04-16",
+    "usage_window_end": "2026-10-13",
+    "payment_terms_days": 45
+  },
+  "invoice": {
+    "vendor_name": "Jia Wen Lim",
+    "invoice_number": "JWL-163",
+    "invoice_date": "2026-05-01",
+    "contract_reference": "MC-2026-8093",
+    "line_items": [
+      {
+        "description": "Instagram reel",
+        "quantity": 2,
+        "unit_price": 1500.0,
+        "amount": 3000.0
+      },
+      {
+        "description": "UGC video asset",
+        "quantity": 2,
+        "unit_price": 2427.72,
+        "amount": 4855.45
+      }
+    ],
+    "total_usd": 7855.45
+  },
+  "truth": {
+    "is_exception": true,
+    "exception_type": "rate_overcharge",
+    "expected_findings": [
+      "rate_overcharge"
+    ]
+  },
+  "render": {
+    "contract_layout": "contract_a",
+    "invoice_layout": "invoice_a",
+    "scanned": false,
+    "rate_in_words": false
+  },
+  "split": "test"
+}

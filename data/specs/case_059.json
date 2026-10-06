@@ -1,0 +1,59 @@
+{
+  "case_id": "case_059",
+  "defect": "duplicate_invoice",
+  "contract": {
+    "creator_name": "Priya Raman",
+    "contract_id": "MC-2026-5404",
+    "rate_usd": 4000.0,
+    "deliverables": [
+      {
+        "type": "static_post",
+        "count": 2
+      },
+      {
+        "type": "ugc_video",
+        "count": 1
+      }
+    ],
+    "deliverable_count": 3,
+    "usage_window_start": "2026-07-13",
+    "usage_window_end": "2027-01-09",
+    "payment_terms_days": 30
+  },
+  "invoice": {
+    "vendor_name": "Priya Raman",
+    "invoice_number": "PR-118",
+    "invoice_date": "2026-07-24",
+    "contract_reference": "MC-2026-5404",
+    "line_items": [
+      {
+        "description": "Static in-feed post",
+        "quantity": 2,
+        "unit_price": 1000.0,
+        "amount": 2000.0
+      },
+      {
+        "description": "UGC video asset",
+        "quantity": 1,
+        "unit_price": 2000.0,
+        "amount": 2000.0
+      }
+    ],
+    "total_usd": 4000.0
+  },
+  "truth": {
+    "is_exception": true,
+    "exception_type": "duplicate_invoice",
+    "expected_findings": [
+      "duplicate_invoice"
+    ],
+    "duplicate_of": "case_008"
+  },
+  "render": {
+    "contract_layout": "contract_c",
+    "invoice_layout": "invoice_c",
+    "scanned": false,
+    "rate_in_words": false
+  },
+  "split": "test"
+}

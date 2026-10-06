@@ -1,0 +1,48 @@
+{
+  "case_id": "case_016",
+  "defect": "rate_overcharge",
+  "contract": {
+    "creator_name": "Sofia Marchetti",
+    "contract_id": "MC-2026-2899",
+    "rate_usd": 1000.0,
+    "deliverables": [
+      {
+        "type": "static_post",
+        "count": 1
+      }
+    ],
+    "deliverable_count": 1,
+    "usage_window_start": "2026-03-01",
+    "usage_window_end": "2026-06-29",
+    "payment_terms_days": 45
+  },
+  "invoice": {
+    "vendor_name": "Sofia Marchetti",
+    "invoice_number": "SM-330",
+    "invoice_date": "2026-03-29",
+    "contract_reference": "MC-2026-2899",
+    "line_items": [
+      {
+        "description": "Static in-feed post",
+        "quantity": 1,
+        "unit_price": 1222.21,
+        "amount": 1222.21
+      }
+    ],
+    "total_usd": 1222.21
+  },
+  "truth": {
+    "is_exception": true,
+    "exception_type": "rate_overcharge",
+    "expected_findings": [
+      "rate_overcharge"
+    ]
+  },
+  "render": {
+    "contract_layout": "contract_a",
+    "invoice_layout": "invoice_a",
+    "scanned": false,
+    "rate_in_words": false
+  },
+  "split": "test"
+}

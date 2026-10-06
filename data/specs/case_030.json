@@ -1,0 +1,66 @@
+{
+  "case_id": "case_030",
+  "defect": "clean",
+  "contract": {
+    "creator_name": "Rosa Delgado",
+    "contract_id": "MC-2026-3758",
+    "rate_usd": 9000.0,
+    "deliverables": [
+      {
+        "type": "ugc_video",
+        "count": 2
+      },
+      {
+        "type": "reel",
+        "count": 2
+      },
+      {
+        "type": "static_post",
+        "count": 2
+      }
+    ],
+    "deliverable_count": 6,
+    "usage_window_start": "2026-04-19",
+    "usage_window_end": "2026-10-16",
+    "payment_terms_days": 45
+  },
+  "invoice": {
+    "vendor_name": "Rosa Delgado",
+    "invoice_number": "RD-396",
+    "invoice_date": "2026-04-24",
+    "contract_reference": "MC-2026-3758",
+    "line_items": [
+      {
+        "description": "UGC video asset",
+        "quantity": 2,
+        "unit_price": 2000.0,
+        "amount": 4000.0
+      },
+      {
+        "description": "Instagram reel",
+        "quantity": 2,
+        "unit_price": 1500.0,
+        "amount": 3000.0
+      },
+      {
+        "description": "Static in-feed post",
+        "quantity": 2,
+        "unit_price": 1000.0,
+        "amount": 2000.0
+      }
+    ],
+    "total_usd": 9000.0
+  },
+  "truth": {
+    "is_exception": false,
+    "exception_type": null,
+    "expected_findings": []
+  },
+  "render": {
+    "contract_layout": "contract_c",
+    "invoice_layout": "invoice_b",
+    "scanned": false,
+    "rate_in_words": false
+  },
+  "split": "test"
+}

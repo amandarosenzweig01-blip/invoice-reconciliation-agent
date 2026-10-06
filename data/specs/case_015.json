@@ -1,0 +1,47 @@
+{
+  "case_id": "case_015",
+  "defect": "vendor_name_variant",
+  "contract": {
+    "creator_name": "Yuki Tanaka",
+    "contract_id": "MC-2026-7637",
+    "rate_usd": 500.0,
+    "deliverables": [
+      {
+        "type": "story",
+        "count": 1
+      }
+    ],
+    "deliverable_count": 1,
+    "usage_window_start": "2026-05-30",
+    "usage_window_end": "2026-08-28",
+    "payment_terms_days": 30
+  },
+  "invoice": {
+    "vendor_name": "Halo Talent Group",
+    "invoice_number": "YT-473",
+    "invoice_date": "2026-07-06",
+    "contract_reference": "MC-2026-7637",
+    "line_items": [
+      {
+        "description": "Instagram story frame",
+        "quantity": 1,
+        "unit_price": 500.0,
+        "amount": 500.0
+      }
+    ],
+    "total_usd": 500.0,
+    "billing_on_behalf_of": "Yuki Tanaka"
+  },
+  "truth": {
+    "is_exception": false,
+    "exception_type": null,
+    "expected_findings": []
+  },
+  "render": {
+    "contract_layout": "contract_b",
+    "invoice_layout": "invoice_a",
+    "scanned": false,
+    "rate_in_words": false
+  },
+  "split": "test"
+}

@@ -1,0 +1,66 @@
+{
+  "case_id": "case_010",
+  "defect": "rate_in_words",
+  "contract": {
+    "creator_name": "Grace Oyelaran",
+    "contract_id": "MC-2026-2656",
+    "rate_usd": 4000.0,
+    "deliverables": [
+      {
+        "type": "story",
+        "count": 1
+      },
+      {
+        "type": "reel",
+        "count": 1
+      },
+      {
+        "type": "static_post",
+        "count": 2
+      }
+    ],
+    "deliverable_count": 4,
+    "usage_window_start": "2026-06-27",
+    "usage_window_end": "2026-10-25",
+    "payment_terms_days": 30
+  },
+  "invoice": {
+    "vendor_name": "Grace Oyelaran",
+    "invoice_number": "GO-698",
+    "invoice_date": "2026-08-02",
+    "contract_reference": "MC-2026-2656",
+    "line_items": [
+      {
+        "description": "Instagram story frame",
+        "quantity": 1,
+        "unit_price": 500.0,
+        "amount": 500.0
+      },
+      {
+        "description": "Instagram reel",
+        "quantity": 1,
+        "unit_price": 1500.0,
+        "amount": 1500.0
+      },
+      {
+        "description": "Static in-feed post",
+        "quantity": 2,
+        "unit_price": 1000.0,
+        "amount": 2000.0
+      }
+    ],
+    "total_usd": 4000.0
+  },
+  "truth": {
+    "is_exception": false,
+    "exception_type": null,
+    "expected_findings": []
+  },
+  "render": {
+    "contract_layout": "contract_b",
+    "invoice_layout": "invoice_c",
+    "scanned": false,
+    "rate_in_words": true
+  },
+  "split": "test"
+}

@@ -1,0 +1,56 @@
+{
+  "case_id": "case_041",
+  "defect": "vendor_name_variant",
+  "contract": {
+    "creator_name": "Jia Wen Lim",
+    "contract_id": "MC-2026-5498",
+    "rate_usd": 3000.0,
+    "deliverables": [
+      {
+        "type": "static_post",
+        "count": 1
+      },
+      {
+        "type": "ugc_video",
+        "count": 1
+      }
+    ],
+    "deliverable_count": 2,
+    "usage_window_start": "2026-05-30",
+    "usage_window_end": "2026-09-27",
+    "payment_terms_days": 30
+  },
+  "invoice": {
+    "vendor_name": "Jia Wen Lim Creative LLC",
+    "invoice_number": "JWL-882",
+    "invoice_date": "2026-06-24",
+    "contract_reference": "MC-2026-5498",
+    "line_items": [
+      {
+        "description": "Static in-feed post",
+        "quantity": 1,
+        "unit_price": 1000.0,
+        "amount": 1000.0
+      },
+      {
+        "description": "UGC video asset",
+        "quantity": 1,
+        "unit_price": 2000.0,
+        "amount": 2000.0
+      }
+    ],
+    "total_usd": 3000.0
+  },
+  "truth": {
+    "is_exception": false,
+    "exception_type": null,
+    "expected_findings": []
+  },
+  "render": {
+    "contract_layout": "contract_c",
+    "invoice_layout": "invoice_b",
+    "scanned": false,
+    "rate_in_words": false
+  },
+  "split": "test"
+}

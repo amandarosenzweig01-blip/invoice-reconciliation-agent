@@ -1,0 +1,52 @@
+{
+  "case_id": "case_045",
+  "defect": "missing_deliverable",
+  "contract": {
+    "creator_name": "Sofia Marchetti",
+    "contract_id": "MC-2026-7231",
+    "rate_usd": 3000.0,
+    "deliverables": [
+      {
+        "type": "story",
+        "count": 3
+      },
+      {
+        "type": "reel",
+        "count": 1
+      }
+    ],
+    "deliverable_count": 4,
+    "usage_window_start": "2026-06-08",
+    "usage_window_end": "2026-12-05",
+    "payment_terms_days": 45
+  },
+  "invoice": {
+    "vendor_name": "Sofia Marchetti",
+    "invoice_number": "SM-179",
+    "invoice_date": "2026-06-28",
+    "contract_reference": "MC-2026-7231",
+    "line_items": [
+      {
+        "description": "Instagram story frame",
+        "quantity": 3,
+        "unit_price": 500.0,
+        "amount": 1500.0
+      }
+    ],
+    "total_usd": 1500.0
+  },
+  "truth": {
+    "is_exception": true,
+    "exception_type": "deliverable_count_mismatch",
+    "expected_findings": [
+      "deliverable_count"
+    ]
+  },
+  "render": {
+    "contract_layout": "contract_b",
+    "invoice_layout": "invoice_a",
+    "scanned": false,
+    "rate_in_words": false
+  },
+  "split": "test"
+}

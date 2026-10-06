@@ -1,6 +1,6 @@
 {
   "case_id": "case_001",
-  "defect": "duplicate_invoice",
+  "defect": "clean",
   "contract": {
     "creator_name": "Priya Raman",
     "contract_id": "MC-2026-7795",
@@ -26,7 +26,7 @@
   },
   "invoice": {
     "vendor_name": "Priya Raman",
-    "invoice_number": "SM-890",
+    "invoice_number": "PR-208",
     "invoice_date": "2026-03-12",
     "contract_reference": "MC-2026-7795",
     "line_items": [
@@ -52,12 +52,9 @@
     "total_usd": 6000.0
   },
   "truth": {
-    "is_exception": true,
-    "exception_type": "duplicate_invoice",
-    "expected_findings": [
-      "duplicate_invoice"
-    ],
-    "duplicate_of": "case_025"
+    "is_exception": false,
+    "exception_type": null,
+    "expected_findings": []
   },
   "render": {
     "contract_layout": "contract_b",

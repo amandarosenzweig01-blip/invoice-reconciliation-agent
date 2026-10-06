@@ -1,0 +1,58 @@
+{
+  "case_id": "case_043",
+  "defect": "late_invoice",
+  "contract": {
+    "creator_name": "Dana Kowalski",
+    "contract_id": "MC-2026-9996",
+    "rate_usd": 3500.0,
+    "deliverables": [
+      {
+        "type": "story",
+        "count": 1
+      },
+      {
+        "type": "reel",
+        "count": 2
+      }
+    ],
+    "deliverable_count": 3,
+    "usage_window_start": "2026-05-23",
+    "usage_window_end": "2026-08-21",
+    "payment_terms_days": 30
+  },
+  "invoice": {
+    "vendor_name": "Dana Kowalski",
+    "invoice_number": "DK-620",
+    "invoice_date": "2026-10-08",
+    "contract_reference": "MC-2026-9996",
+    "line_items": [
+      {
+        "description": "Instagram story frame",
+        "quantity": 1,
+        "unit_price": 500.0,
+        "amount": 500.0
+      },
+      {
+        "description": "Instagram reel",
+        "quantity": 2,
+        "unit_price": 1500.0,
+        "amount": 3000.0
+      }
+    ],
+    "total_usd": 3500.0
+  },
+  "truth": {
+    "is_exception": true,
+    "exception_type": "late_submission",
+    "expected_findings": [
+      "payment_window"
+    ]
+  },
+  "render": {
+    "contract_layout": "contract_c",
+    "invoice_layout": "invoice_b",
+    "scanned": true,
+    "rate_in_words": false
+  },
+  "split": "test"
+}

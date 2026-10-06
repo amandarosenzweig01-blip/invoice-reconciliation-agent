@@ -66,6 +66,7 @@ DEFECT_PLAN: list[tuple[str, int, bool]] = [
 TOTAL_CASES = sum(count for _, count, _ in DEFECT_PLAN)
 SCANNED_TARGET = 8          # spread across defect types, not concentrated
 DEV_TARGET = 20             # cases you are allowed to inspect while iterating
+DUPLICATE_MIN_INDEX = 10    # no duplicate may appear before this position
 
 
 # --- building a clean case -------------------------------------------------
@@ -272,6 +273,17 @@ def build_corpus(seed: int = 20260924) -> list[dict[str, Any]]:
     for name, count, _ in DEFECT_PLAN:
         defects.extend([name] * count)
     rng.shuffle(defects)
+
+    # A duplicate must follow the invoice it duplicates, so no duplicate_invoice
+    # case may land near the front of the run. Without this, case_001 could be
+    # labeled a duplicate of a case that has not been processed yet, which no
+    # ledger-based rule could ever catch and which would show up as a permanent
+    # false negative that is really a labeling artifact.
+    for i in range(DUPLICATE_MIN_INDEX):
+        if defects[i] == "duplicate_invoice":
+            swap = next(j for j in range(len(defects) - 1, DUPLICATE_MIN_INDEX - 1, -1)
+                        if defects[j] != "duplicate_invoice")
+            defects[i], defects[swap] = defects[swap], defects[i]
 
     specs = []
     for i, defect in enumerate(defects, start=1):

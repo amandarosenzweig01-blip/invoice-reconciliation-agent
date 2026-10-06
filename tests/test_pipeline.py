@@ -1,4 +1,4 @@
-"""Week 2 tests. None of these call the API, so they cost nothing and run in
+"""Pipeline tests. None of these call the API, so they cost nothing and run in
 about a second. Run them before every eval to catch wiring mistakes before
 you pay for 120 model calls.
 """
@@ -66,7 +66,7 @@ def test_grounding_catches_an_invented_field(cases):
 
 def test_grounding_returns_none_on_vision_path():
     """None means "could not check" and must stay distinct from 0.0, which
-    means "checked and absent". The week 3 gate treats them differently."""
+    means "checked and absent". The escalation gate treats them differently."""
     model = ContractFields(creator_name="Ava Reyes")
     rate, _ = grounding_rate(model, CONTRACT_CHECKED, "")
     assert rate is None

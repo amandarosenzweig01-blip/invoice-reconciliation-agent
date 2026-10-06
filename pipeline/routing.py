@@ -1,7 +1,6 @@
 """Decide how to send a PDF to the model.
 
-This is the piece that gets the most attention in an interview, because it
-is a cost decision rather than a capability decision. A vision call on a
+This is a cost decision rather than a capability decision. A vision call on a
 two-page document costs several times what the same document costs as text,
 so you pay that only when you have to.
 """
@@ -18,7 +17,7 @@ from pypdf import PdfReader
 # characters. The shortest digital invoice in the corpus is 177. So 100 sits
 # comfortably below any legitimate document and comfortably above the stray
 # artifacts a scanner sometimes leaves behind. It is a heuristic, not a
-# truth, and it is worth saying so out loud.
+# truth, and a sparse digital PDF would route to vision unnecessarily.
 MIN_CHARS = 100
 RENDER_DPI = 150
 

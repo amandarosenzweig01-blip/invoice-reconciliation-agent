@@ -1,4 +1,4 @@
-"""Shared evaluation harness. Copy this package into each project repo unchanged."""
+"""Shared evaluation harness: golden sets, runs, metrics, and reports."""
 
 from .cases import Case, as_money, load_cases, normalize, values_match
 from .metrics import binary_prf, cost_summary, field_accuracy, latency_summary, percentile

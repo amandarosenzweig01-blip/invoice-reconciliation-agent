@@ -1,0 +1,56 @@
+{
+  "case_id": "case_022",
+  "defect": "clean",
+  "contract": {
+    "creator_name": "Grace Oyelaran",
+    "contract_id": "MC-2026-5543",
+    "rate_usd": 6000.0,
+    "deliverables": [
+      {
+        "type": "ugc_video",
+        "count": 2
+      },
+      {
+        "type": "static_post",
+        "count": 2
+      }
+    ],
+    "deliverable_count": 4,
+    "usage_window_start": "2026-07-16",
+    "usage_window_end": "2026-10-14",
+    "payment_terms_days": 45
+  },
+  "invoice": {
+    "vendor_name": "Grace Oyelaran",
+    "invoice_number": "GO-428",
+    "invoice_date": "2026-07-30",
+    "contract_reference": "MC-2026-5543",
+    "line_items": [
+      {
+        "description": "UGC video asset",
+        "quantity": 2,
+        "unit_price": 2000.0,
+        "amount": 4000.0
+      },
+      {
+        "description": "Static in-feed post",
+        "quantity": 2,
+        "unit_price": 1000.0,
+        "amount": 2000.0
+      }
+    ],
+    "total_usd": 6000.0
+  },
+  "truth": {
+    "is_exception": false,
+    "exception_type": null,
+    "expected_findings": []
+  },
+  "render": {
+    "contract_layout": "contract_a",
+    "invoice_layout": "invoice_a",
+    "scanned": false,
+    "rate_in_words": false
+  },
+  "split": "dev"
+}

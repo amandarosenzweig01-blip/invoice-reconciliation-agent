@@ -1,0 +1,48 @@
+{
+  "case_id": "case_053",
+  "defect": "rate_overcharge",
+  "contract": {
+    "creator_name": "Dana Kowalski",
+    "contract_id": "MC-2026-5506",
+    "rate_usd": 2000.0,
+    "deliverables": [
+      {
+        "type": "ugc_video",
+        "count": 1
+      }
+    ],
+    "deliverable_count": 1,
+    "usage_window_start": "2026-06-22",
+    "usage_window_end": "2026-10-20",
+    "payment_terms_days": 30
+  },
+  "invoice": {
+    "vendor_name": "Dana Kowalski",
+    "invoice_number": "DK-992",
+    "invoice_date": "2026-07-28",
+    "contract_reference": "MC-2026-5506",
+    "line_items": [
+      {
+        "description": "UGC video asset",
+        "quantity": 1,
+        "unit_price": 2308.06,
+        "amount": 2308.06
+      }
+    ],
+    "total_usd": 2308.06
+  },
+  "truth": {
+    "is_exception": true,
+    "exception_type": "rate_overcharge",
+    "expected_findings": [
+      "rate_overcharge"
+    ]
+  },
+  "render": {
+    "contract_layout": "contract_c",
+    "invoice_layout": "invoice_b",
+    "scanned": false,
+    "rate_in_words": false
+  },
+  "split": "test"
+}

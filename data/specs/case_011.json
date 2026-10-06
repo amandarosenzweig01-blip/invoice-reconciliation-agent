@@ -1,0 +1,52 @@
+{
+  "case_id": "case_011",
+  "defect": "missing_deliverable",
+  "contract": {
+    "creator_name": "Lucia Ferrari",
+    "contract_id": "MC-2026-2913",
+    "rate_usd": 2500.0,
+    "deliverables": [
+      {
+        "type": "static_post",
+        "count": 1
+      },
+      {
+        "type": "reel",
+        "count": 1
+      }
+    ],
+    "deliverable_count": 2,
+    "usage_window_start": "2026-05-18",
+    "usage_window_end": "2026-08-16",
+    "payment_terms_days": 60
+  },
+  "invoice": {
+    "vendor_name": "Lucia Ferrari",
+    "invoice_number": "LF-516",
+    "invoice_date": "2026-05-23",
+    "contract_reference": "MC-2026-2913",
+    "line_items": [
+      {
+        "description": "Static in-feed post",
+        "quantity": 1,
+        "unit_price": 1000.0,
+        "amount": 1000.0
+      }
+    ],
+    "total_usd": 1000.0
+  },
+  "truth": {
+    "is_exception": true,
+    "exception_type": "deliverable_count_mismatch",
+    "expected_findings": [
+      "deliverable_count"
+    ]
+  },
+  "render": {
+    "contract_layout": "contract_c",
+    "invoice_layout": "invoice_c",
+    "scanned": false,
+    "rate_in_words": false
+  },
+  "split": "dev"
+}

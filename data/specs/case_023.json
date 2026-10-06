@@ -1,0 +1,66 @@
+{
+  "case_id": "case_023",
+  "defect": "clean",
+  "contract": {
+    "creator_name": "Jordan Whitfield",
+    "contract_id": "MC-2026-2813",
+    "rate_usd": 6500.0,
+    "deliverables": [
+      {
+        "type": "static_post",
+        "count": 3
+      },
+      {
+        "type": "story",
+        "count": 3
+      },
+      {
+        "type": "ugc_video",
+        "count": 1
+      }
+    ],
+    "deliverable_count": 7,
+    "usage_window_start": "2026-06-16",
+    "usage_window_end": "2026-12-13",
+    "payment_terms_days": 60
+  },
+  "invoice": {
+    "vendor_name": "Jordan Whitfield",
+    "invoice_number": "JW-784",
+    "invoice_date": "2026-07-01",
+    "contract_reference": "MC-2026-2813",
+    "line_items": [
+      {
+        "description": "Static in-feed post",
+        "quantity": 3,
+        "unit_price": 1000.0,
+        "amount": 3000.0
+      },
+      {
+        "description": "Instagram story frame",
+        "quantity": 3,
+        "unit_price": 500.0,
+        "amount": 1500.0
+      },
+      {
+        "description": "UGC video asset",
+        "quantity": 1,
+        "unit_price": 2000.0,
+        "amount": 2000.0
+      }
+    ],
+    "total_usd": 6500.0
+  },
+  "truth": {
+    "is_exception": false,
+    "exception_type": null,
+    "expected_findings": []
+  },
+  "render": {
+    "contract_layout": "contract_a",
+    "invoice_layout": "invoice_c",
+    "scanned": false,
+    "rate_in_words": false
+  },
+  "split": "dev"
+}

@@ -1,0 +1,66 @@
+{
+  "case_id": "case_036",
+  "defect": "clean",
+  "contract": {
+    "creator_name": "Yuki Tanaka",
+    "contract_id": "MC-2026-5020",
+    "rate_usd": 8500.0,
+    "deliverables": [
+      {
+        "type": "ugc_video",
+        "count": 3
+      },
+      {
+        "type": "static_post",
+        "count": 1
+      },
+      {
+        "type": "story",
+        "count": 3
+      }
+    ],
+    "deliverable_count": 7,
+    "usage_window_start": "2026-05-15",
+    "usage_window_end": "2026-08-13",
+    "payment_terms_days": 30
+  },
+  "invoice": {
+    "vendor_name": "Yuki Tanaka",
+    "invoice_number": "YT-664",
+    "invoice_date": "2026-06-11",
+    "contract_reference": "MC-2026-5020",
+    "line_items": [
+      {
+        "description": "UGC video asset",
+        "quantity": 3,
+        "unit_price": 2000.0,
+        "amount": 6000.0
+      },
+      {
+        "description": "Static in-feed post",
+        "quantity": 1,
+        "unit_price": 1000.0,
+        "amount": 1000.0
+      },
+      {
+        "description": "Instagram story frame",
+        "quantity": 3,
+        "unit_price": 500.0,
+        "amount": 1500.0
+      }
+    ],
+    "total_usd": 8500.0
+  },
+  "truth": {
+    "is_exception": false,
+    "exception_type": null,
+    "expected_findings": []
+  },
+  "render": {
+    "contract_layout": "contract_a",
+    "invoice_layout": "invoice_a",
+    "scanned": false,
+    "rate_in_words": false
+  },
+  "split": "test"
+}

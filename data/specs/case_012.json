@@ -1,0 +1,48 @@
+{
+  "case_id": "case_012",
+  "defect": "late_invoice",
+  "contract": {
+    "creator_name": "Nadia Petrov",
+    "contract_id": "MC-2026-1376",
+    "rate_usd": 1000.0,
+    "deliverables": [
+      {
+        "type": "story",
+        "count": 2
+      }
+    ],
+    "deliverable_count": 2,
+    "usage_window_start": "2026-06-14",
+    "usage_window_end": "2026-10-12",
+    "payment_terms_days": 45
+  },
+  "invoice": {
+    "vendor_name": "Nadia Petrov",
+    "invoice_number": "NP-420",
+    "invoice_date": "2027-02-15",
+    "contract_reference": "MC-2026-1376",
+    "line_items": [
+      {
+        "description": "Instagram story frame",
+        "quantity": 2,
+        "unit_price": 500.0,
+        "amount": 1000.0
+      }
+    ],
+    "total_usd": 1000.0
+  },
+  "truth": {
+    "is_exception": true,
+    "exception_type": "late_submission",
+    "expected_findings": [
+      "payment_window"
+    ]
+  },
+  "render": {
+    "contract_layout": "contract_a",
+    "invoice_layout": "invoice_c",
+    "scanned": false,
+    "rate_in_words": false
+  },
+  "split": "dev"
+}

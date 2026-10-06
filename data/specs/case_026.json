@@ -1,0 +1,46 @@
+{
+  "case_id": "case_026",
+  "defect": "clean",
+  "contract": {
+    "creator_name": "Jia Wen Lim",
+    "contract_id": "MC-2026-8956",
+    "rate_usd": 1500.0,
+    "deliverables": [
+      {
+        "type": "reel",
+        "count": 1
+      }
+    ],
+    "deliverable_count": 1,
+    "usage_window_start": "2026-06-28",
+    "usage_window_end": "2026-10-26",
+    "payment_terms_days": 30
+  },
+  "invoice": {
+    "vendor_name": "Jia Wen Lim",
+    "invoice_number": "JWL-582",
+    "invoice_date": "2026-07-22",
+    "contract_reference": "MC-2026-8956",
+    "line_items": [
+      {
+        "description": "Instagram reel",
+        "quantity": 1,
+        "unit_price": 1500.0,
+        "amount": 1500.0
+      }
+    ],
+    "total_usd": 1500.0
+  },
+  "truth": {
+    "is_exception": false,
+    "exception_type": null,
+    "expected_findings": []
+  },
+  "render": {
+    "contract_layout": "contract_c",
+    "invoice_layout": "invoice_b",
+    "scanned": false,
+    "rate_in_words": false
+  },
+  "split": "test"
+}

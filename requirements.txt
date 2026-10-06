@@ -1,23 +1,11 @@
-# Core, shared across all three projects
 python-dotenv>=1.0
 pydantic>=2.7
-streamlit>=1.37
-
-# Project 1: extraction and reconciliation
 anthropic>=0.40
+streamlit>=1.37
 pypdf>=4.2
-pdf2image>=1.17
-
-# Project 2: retrieval
-llama-index>=0.11
-rank-bm25>=0.2.2
-chromadb>=0.5
-ragas>=0.2
-
-# Project 3: analysis
-pandas>=2.2
-duckdb>=1.0
-
-# Dev
+pypdfium2>=4.30
+rapidfuzz>=3.9
+jinja2>=3.1
+weasyprint>=62
+pillow>=10.0
 pytest>=8.0
-ruff>=0.6

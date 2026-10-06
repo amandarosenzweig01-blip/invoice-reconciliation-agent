@@ -1,0 +1,69 @@
+{
+  "case_id": "case_060",
+  "defect": "duplicate_invoice",
+  "contract": {
+    "creator_name": "Sofia Marchetti",
+    "contract_id": "MC-2026-2960",
+    "rate_usd": 7500.0,
+    "deliverables": [
+      {
+        "type": "ugc_video",
+        "count": 2
+      },
+      {
+        "type": "reel",
+        "count": 2
+      },
+      {
+        "type": "story",
+        "count": 1
+      }
+    ],
+    "deliverable_count": 5,
+    "usage_window_start": "2026-05-15",
+    "usage_window_end": "2026-09-12",
+    "payment_terms_days": 60
+  },
+  "invoice": {
+    "vendor_name": "Sofia Marchetti",
+    "invoice_number": "YT-222",
+    "invoice_date": "2026-06-15",
+    "contract_reference": "MC-2026-2960",
+    "line_items": [
+      {
+        "description": "UGC video asset",
+        "quantity": 2,
+        "unit_price": 2000.0,
+        "amount": 4000.0
+      },
+      {
+        "description": "Instagram reel",
+        "quantity": 2,
+        "unit_price": 1500.0,
+        "amount": 3000.0
+      },
+      {
+        "description": "Instagram story frame",
+        "quantity": 1,
+        "unit_price": 500.0,
+        "amount": 500.0
+      }
+    ],
+    "total_usd": 7500.0
+  },
+  "truth": {
+    "is_exception": true,
+    "exception_type": "duplicate_invoice",
+    "expected_findings": [
+      "duplicate_invoice"
+    ],
+    "duplicate_of": "case_029"
+  },
+  "render": {
+    "contract_layout": "contract_a",
+    "invoice_layout": "invoice_a",
+    "scanned": false,
+    "rate_in_words": false
+  },
+  "split": "dev"
+}

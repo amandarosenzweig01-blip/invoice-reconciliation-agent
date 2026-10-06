@@ -1,7 +1,6 @@
 """Metrics. Small, boring, and auditable on purpose.
 
-Every number an interviewer asks about should be traceable to about ten
-lines of code they could read over your shoulder.
+Every number reported here should be traceable to about ten lines of code.
 """
 
 from __future__ import annotations

@@ -1,0 +1,52 @@
+{
+  "case_id": "case_050",
+  "defect": "missing_deliverable",
+  "contract": {
+    "creator_name": "Mira Chen",
+    "contract_id": "MC-2026-8247",
+    "rate_usd": 8000.0,
+    "deliverables": [
+      {
+        "type": "ugc_video",
+        "count": 3
+      },
+      {
+        "type": "static_post",
+        "count": 2
+      }
+    ],
+    "deliverable_count": 5,
+    "usage_window_start": "2026-07-17",
+    "usage_window_end": "2027-01-13",
+    "payment_terms_days": 30
+  },
+  "invoice": {
+    "vendor_name": "Mira Chen",
+    "invoice_number": "MC-190",
+    "invoice_date": "2026-08-03",
+    "contract_reference": "MC-2026-8247",
+    "line_items": [
+      {
+        "description": "UGC video asset",
+        "quantity": 3,
+        "unit_price": 2000.0,
+        "amount": 6000.0
+      }
+    ],
+    "total_usd": 6000.0
+  },
+  "truth": {
+    "is_exception": true,
+    "exception_type": "deliverable_count_mismatch",
+    "expected_findings": [
+      "deliverable_count"
+    ]
+  },
+  "render": {
+    "contract_layout": "contract_b",
+    "invoice_layout": "invoice_a",
+    "scanned": false,
+    "rate_in_words": false
+  },
+  "split": "test"
+}

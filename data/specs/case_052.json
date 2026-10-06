@@ -1,0 +1,68 @@
+{
+  "case_id": "case_052",
+  "defect": "rate_overcharge",
+  "contract": {
+    "creator_name": "Yuki Tanaka",
+    "contract_id": "MC-2026-2840",
+    "rate_usd": 8000.0,
+    "deliverables": [
+      {
+        "type": "ugc_video",
+        "count": 3
+      },
+      {
+        "type": "reel",
+        "count": 1
+      },
+      {
+        "type": "story",
+        "count": 1
+      }
+    ],
+    "deliverable_count": 5,
+    "usage_window_start": "2026-05-14",
+    "usage_window_end": "2026-08-12",
+    "payment_terms_days": 30
+  },
+  "invoice": {
+    "vendor_name": "Yuki Tanaka",
+    "invoice_number": "YT-135",
+    "invoice_date": "2026-06-02",
+    "contract_reference": "MC-2026-2840",
+    "line_items": [
+      {
+        "description": "UGC video asset",
+        "quantity": 3,
+        "unit_price": 2000.0,
+        "amount": 6000.0
+      },
+      {
+        "description": "Instagram reel",
+        "quantity": 1,
+        "unit_price": 1500.0,
+        "amount": 1500.0
+      },
+      {
+        "description": "Instagram story frame",
+        "quantity": 1,
+        "unit_price": 2271.05,
+        "amount": 2271.05
+      }
+    ],
+    "total_usd": 9771.05
+  },
+  "truth": {
+    "is_exception": true,
+    "exception_type": "rate_overcharge",
+    "expected_findings": [
+      "rate_overcharge"
+    ]
+  },
+  "render": {
+    "contract_layout": "contract_b",
+    "invoice_layout": "invoice_a",
+    "scanned": true,
+    "rate_in_words": false
+  },
+  "split": "test"
+}

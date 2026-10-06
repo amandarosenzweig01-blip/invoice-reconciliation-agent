@@ -9,8 +9,11 @@ error, which is a much better failure mode.
 
 from __future__ import annotations
 
+import hashlib
+import json
 import os
 import time
+from pathlib import Path
 from typing import Any, TypeVar
 
 import anthropic
@@ -21,8 +24,7 @@ T = TypeVar("T", bound=BaseModel)
 MODEL = os.environ.get("EXTRACTION_MODEL", "claude-sonnet-5")
 
 # USD per million tokens. Verified September 2026 against public pricing.
-# Put the date in this comment and re-check it before you quote a cost
-# number in an interview.
+# Re-check these before relying on any cost figure.
 PRICING = {
     "claude-sonnet-5":            {"input": 2.00, "output": 10.00},
     "claude-haiku-4-5-20251001":  {"input": 1.00, "output": 5.00},
@@ -41,7 +43,23 @@ as "four thousand five hundred dollars", to 4500.
 - Copy names exactly as written, including suffixes such as LLC or Inc.
 - If an agency is billing on behalf of a creator, record both names separately."""
 
+CACHE_DIR = Path(os.environ.get("EXTRACTION_CACHE", ".cache/extractions"))
+CACHE_ENABLED = os.environ.get("EXTRACTION_CACHE_ENABLED", "1") != "0"
+
 _client: anthropic.Anthropic | None = None
+
+
+def _cache_key(content_blocks: list[dict], label: str, model: str) -> str:
+    """Hash the exact payload sent to the model.
+
+    Extraction is the expensive, slow, non-deterministic part. Everything
+    downstream of it is free. Caching on the payload means a threshold sweep
+    re-runs the decision layer sixty times without paying for extraction
+    twice, and it makes a demo replay instantly instead of waiting on the
+    API. Delete .cache/ to force a genuine re-run.
+    """
+    payload = json.dumps([content_blocks, label, model, SYSTEM], sort_keys=True)
+    return hashlib.sha256(payload.encode()).hexdigest()[:24]
 
 
 def client() -> anthropic.Anthropic:
@@ -73,6 +91,15 @@ def extract(
     still fails raises, and the eval harness records it as a hard error.
     Hard error rate is a number worth reporting rather than hiding.
     """
+    key = _cache_key(content_blocks, label, model)
+    cache_path = CACHE_DIR / f"{key}.json"
+    if CACHE_ENABLED and cache_path.exists():
+        cached = json.loads(cache_path.read_text())
+        # A cache hit costs nothing, so it reports zero rather than replaying
+        # the original spend. Mixing real and replayed cost would make the
+        # cost-per-case number meaningless.
+        return schema.model_validate(cached["input"]), 0.0
+
     tool = {
         "name": f"record_{label}",
         "description": f"Record every field found in the {label}.",
@@ -94,7 +121,12 @@ def extract(
         total_cost += usage_cost(response.usage, model)
         block = next(b for b in response.content if b.type == "tool_use")
         try:
-            return schema.model_validate(block.input), total_cost
+            parsed = schema.model_validate(block.input)
+            if CACHE_ENABLED:
+                cache_path.parent.mkdir(parents=True, exist_ok=True)
+                cache_path.write_text(json.dumps({"input": block.input, "model": model,
+                                                  "label": label}, default=str))
+            return parsed, total_cost
         except ValidationError as exc:
             last_error = exc
             if attempt == retries:

@@ -1,0 +1,56 @@
+{
+  "case_id": "case_024",
+  "defect": "clean",
+  "contract": {
+    "creator_name": "Nadia Petrov",
+    "contract_id": "MC-2026-8557",
+    "rate_usd": 7000.0,
+    "deliverables": [
+      {
+        "type": "ugc_video",
+        "count": 2
+      },
+      {
+        "type": "reel",
+        "count": 2
+      }
+    ],
+    "deliverable_count": 4,
+    "usage_window_start": "2026-05-31",
+    "usage_window_end": "2026-09-28",
+    "payment_terms_days": 45
+  },
+  "invoice": {
+    "vendor_name": "Nadia Petrov",
+    "invoice_number": "NP-188",
+    "invoice_date": "2026-06-05",
+    "contract_reference": "MC-2026-8557",
+    "line_items": [
+      {
+        "description": "UGC video asset",
+        "quantity": 2,
+        "unit_price": 2000.0,
+        "amount": 4000.0
+      },
+      {
+        "description": "Instagram reel",
+        "quantity": 2,
+        "unit_price": 1500.0,
+        "amount": 3000.0
+      }
+    ],
+    "total_usd": 7000.0
+  },
+  "truth": {
+    "is_exception": false,
+    "exception_type": null,
+    "expected_findings": []
+  },
+  "render": {
+    "contract_layout": "contract_c",
+    "invoice_layout": "invoice_b",
+    "scanned": false,
+    "rate_in_words": false
+  },
+  "split": "dev"
+}

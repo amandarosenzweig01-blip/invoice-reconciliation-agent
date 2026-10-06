@@ -41,7 +41,7 @@ def main() -> int:
     for d in (SPEC_DIR, CONTRACT_DIR, INVOICE_DIR):
         d.mkdir(parents=True, exist_ok=True)
 
-    targets = specs[: args.limit] if args.limit is not None else specs
+    targets = specs[: args.limit] if args.limit else specs
     problems: list[str] = []
 
     for i, spec in enumerate(targets, start=1):

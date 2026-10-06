@@ -1,0 +1,66 @@
+{
+  "case_id": "case_008",
+  "defect": "clean",
+  "contract": {
+    "creator_name": "Priya Raman",
+    "contract_id": "MC-2026-1239",
+    "rate_usd": 9500.0,
+    "deliverables": [
+      {
+        "type": "reel",
+        "count": 3
+      },
+      {
+        "type": "story",
+        "count": 2
+      },
+      {
+        "type": "ugc_video",
+        "count": 2
+      }
+    ],
+    "deliverable_count": 7,
+    "usage_window_start": "2026-04-15",
+    "usage_window_end": "2026-08-13",
+    "payment_terms_days": 30
+  },
+  "invoice": {
+    "vendor_name": "Priya Raman",
+    "invoice_number": "PR-118",
+    "invoice_date": "2026-04-20",
+    "contract_reference": "MC-2026-1239",
+    "line_items": [
+      {
+        "description": "Instagram reel",
+        "quantity": 3,
+        "unit_price": 1500.0,
+        "amount": 4500.0
+      },
+      {
+        "description": "Instagram story frame",
+        "quantity": 2,
+        "unit_price": 500.0,
+        "amount": 1000.0
+      },
+      {
+        "description": "UGC video asset",
+        "quantity": 2,
+        "unit_price": 2000.0,
+        "amount": 4000.0
+      }
+    ],
+    "total_usd": 9500.0
+  },
+  "truth": {
+    "is_exception": false,
+    "exception_type": null,
+    "expected_findings": []
+  },
+  "render": {
+    "contract_layout": "contract_a",
+    "invoice_layout": "invoice_c",
+    "scanned": false,
+    "rate_in_words": false
+  },
+  "split": "dev"
+}

@@ -1,0 +1,52 @@
+{
+  "case_id": "case_019",
+  "defect": "missing_deliverable",
+  "contract": {
+    "creator_name": "Noor Haddad",
+    "contract_id": "MC-2026-5724",
+    "rate_usd": 2500.0,
+    "deliverables": [
+      {
+        "type": "story",
+        "count": 1
+      },
+      {
+        "type": "ugc_video",
+        "count": 1
+      }
+    ],
+    "deliverable_count": 2,
+    "usage_window_start": "2026-03-17",
+    "usage_window_end": "2026-07-15",
+    "payment_terms_days": 30
+  },
+  "invoice": {
+    "vendor_name": "Noor Haddad",
+    "invoice_number": "NH-760",
+    "invoice_date": "2026-04-01",
+    "contract_reference": "MC-2026-5724",
+    "line_items": [
+      {
+        "description": "UGC video asset",
+        "quantity": 1,
+        "unit_price": 2000.0,
+        "amount": 2000.0
+      }
+    ],
+    "total_usd": 2000.0
+  },
+  "truth": {
+    "is_exception": true,
+    "exception_type": "deliverable_count_mismatch",
+    "expected_findings": [
+      "deliverable_count"
+    ]
+  },
+  "render": {
+    "contract_layout": "contract_a",
+    "invoice_layout": "invoice_c",
+    "scanned": true,
+    "rate_in_words": false
+  },
+  "split": "dev"
+}

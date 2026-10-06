@@ -1,0 +1,57 @@
+{
+  "case_id": "case_046",
+  "defect": "vendor_name_variant",
+  "contract": {
+    "creator_name": "Jordan Whitfield",
+    "contract_id": "MC-2026-6111",
+    "rate_usd": 1500.0,
+    "deliverables": [
+      {
+        "type": "static_post",
+        "count": 1
+      },
+      {
+        "type": "story",
+        "count": 1
+      }
+    ],
+    "deliverable_count": 2,
+    "usage_window_start": "2026-06-28",
+    "usage_window_end": "2026-10-26",
+    "payment_terms_days": 45
+  },
+  "invoice": {
+    "vendor_name": "Lumen Studio LLC",
+    "invoice_number": "JW-964",
+    "invoice_date": "2026-07-12",
+    "contract_reference": "MC-2026-6111",
+    "line_items": [
+      {
+        "description": "Static in-feed post",
+        "quantity": 1,
+        "unit_price": 1000.0,
+        "amount": 1000.0
+      },
+      {
+        "description": "Instagram story frame",
+        "quantity": 1,
+        "unit_price": 500.0,
+        "amount": 500.0
+      }
+    ],
+    "total_usd": 1500.0,
+    "billing_on_behalf_of": "Jordan Whitfield"
+  },
+  "truth": {
+    "is_exception": false,
+    "exception_type": null,
+    "expected_findings": []
+  },
+  "render": {
+    "contract_layout": "contract_b",
+    "invoice_layout": "invoice_b",
+    "scanned": false,
+    "rate_in_words": false
+  },
+  "split": "test"
+}

@@ -1,0 +1,65 @@
+{
+  "case_id": "case_037",
+  "defect": "bundled_invoice",
+  "contract": {
+    "creator_name": "Camille Boucher",
+    "contract_id": "MC-2026-4166",
+    "rate_usd": 2000.0,
+    "deliverables": [
+      {
+        "type": "story",
+        "count": 2
+      },
+      {
+        "type": "static_post",
+        "count": 1
+      }
+    ],
+    "deliverable_count": 3,
+    "usage_window_start": "2026-04-09",
+    "usage_window_end": "2026-08-07",
+    "payment_terms_days": 30
+  },
+  "invoice": {
+    "vendor_name": "Camille Boucher",
+    "invoice_number": "CB-821",
+    "invoice_date": "2026-04-18",
+    "contract_reference": "MC-2026-4166, MC-2026-3116",
+    "line_items": [
+      {
+        "description": "Instagram story frame",
+        "quantity": 2,
+        "unit_price": 500.0,
+        "amount": 1000.0
+      },
+      {
+        "description": "Static in-feed post",
+        "quantity": 1,
+        "unit_price": 1000.0,
+        "amount": 1000.0
+      },
+      {
+        "description": "UGC video asset (ref MC-2026-3116)",
+        "quantity": 2,
+        "unit_price": 2000.0,
+        "amount": 4000.0
+      }
+    ],
+    "total_usd": 6000.0
+  },
+  "truth": {
+    "is_exception": true,
+    "exception_type": "bundled_invoice",
+    "expected_findings": [
+      "scope",
+      "rate_overcharge"
+    ]
+  },
+  "render": {
+    "contract_layout": "contract_a",
+    "invoice_layout": "invoice_a",
+    "scanned": false,
+    "rate_in_words": false
+  },
+  "split": "test"
+}

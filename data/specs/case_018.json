@@ -1,0 +1,69 @@
+{
+  "case_id": "case_018",
+  "defect": "duplicate_invoice",
+  "contract": {
+    "creator_name": "Jordan Whitfield",
+    "contract_id": "MC-2026-3542",
+    "rate_usd": 4500.0,
+    "deliverables": [
+      {
+        "type": "reel",
+        "count": 1
+      },
+      {
+        "type": "static_post",
+        "count": 2
+      },
+      {
+        "type": "story",
+        "count": 2
+      }
+    ],
+    "deliverable_count": 5,
+    "usage_window_start": "2026-03-03",
+    "usage_window_end": "2026-07-01",
+    "payment_terms_days": 30
+  },
+  "invoice": {
+    "vendor_name": "Jordan Whitfield",
+    "invoice_number": "JWL-827",
+    "invoice_date": "2026-03-28",
+    "contract_reference": "MC-2026-3542",
+    "line_items": [
+      {
+        "description": "Instagram reel",
+        "quantity": 1,
+        "unit_price": 1500.0,
+        "amount": 1500.0
+      },
+      {
+        "description": "Static in-feed post",
+        "quantity": 2,
+        "unit_price": 1000.0,
+        "amount": 2000.0
+      },
+      {
+        "description": "Instagram story frame",
+        "quantity": 2,
+        "unit_price": 500.0,
+        "amount": 1000.0
+      }
+    ],
+    "total_usd": 4500.0
+  },
+  "truth": {
+    "is_exception": true,
+    "exception_type": "duplicate_invoice",
+    "expected_findings": [
+      "duplicate_invoice"
+    ],
+    "duplicate_of": "case_013"
+  },
+  "render": {
+    "contract_layout": "contract_c",
+    "invoice_layout": "invoice_c",
+    "scanned": false,
+    "rate_in_words": false
+  },
+  "split": "test"
+}

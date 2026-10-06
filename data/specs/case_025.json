@@ -1,0 +1,58 @@
+{
+  "case_id": "case_025",
+  "defect": "rate_overcharge",
+  "contract": {
+    "creator_name": "Sofia Marchetti",
+    "contract_id": "MC-2026-3657",
+    "rate_usd": 3000.0,
+    "deliverables": [
+      {
+        "type": "reel",
+        "count": 1
+      },
+      {
+        "type": "story",
+        "count": 3
+      }
+    ],
+    "deliverable_count": 4,
+    "usage_window_start": "2026-07-05",
+    "usage_window_end": "2027-01-01",
+    "payment_terms_days": 30
+  },
+  "invoice": {
+    "vendor_name": "Sofia Marchetti",
+    "invoice_number": "SM-890",
+    "invoice_date": "2026-07-23",
+    "contract_reference": "MC-2026-3657",
+    "line_items": [
+      {
+        "description": "Instagram reel",
+        "quantity": 1,
+        "unit_price": 1500.0,
+        "amount": 1500.0
+      },
+      {
+        "description": "Instagram story frame",
+        "quantity": 3,
+        "unit_price": 612.37,
+        "amount": 1837.11
+      }
+    ],
+    "total_usd": 3337.11
+  },
+  "truth": {
+    "is_exception": true,
+    "exception_type": "rate_overcharge",
+    "expected_findings": [
+      "rate_overcharge"
+    ]
+  },
+  "render": {
+    "contract_layout": "contract_b",
+    "invoice_layout": "invoice_b",
+    "scanned": false,
+    "rate_in_words": false
+  },
+  "split": "test"
+}

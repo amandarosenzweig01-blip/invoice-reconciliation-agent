@@ -1,0 +1,58 @@
+{
+  "case_id": "case_021",
+  "defect": "late_invoice",
+  "contract": {
+    "creator_name": "Jia Wen Lim",
+    "contract_id": "MC-2026-1970",
+    "rate_usd": 5000.0,
+    "deliverables": [
+      {
+        "type": "static_post",
+        "count": 2
+      },
+      {
+        "type": "reel",
+        "count": 2
+      }
+    ],
+    "deliverable_count": 4,
+    "usage_window_start": "2026-05-10",
+    "usage_window_end": "2026-11-06",
+    "payment_terms_days": 45
+  },
+  "invoice": {
+    "vendor_name": "Jia Wen Lim",
+    "invoice_number": "JWL-946",
+    "invoice_date": "2027-02-20",
+    "contract_reference": "MC-2026-1970",
+    "line_items": [
+      {
+        "description": "Static in-feed post",
+        "quantity": 2,
+        "unit_price": 1000.0,
+        "amount": 2000.0
+      },
+      {
+        "description": "Instagram reel",
+        "quantity": 2,
+        "unit_price": 1500.0,
+        "amount": 3000.0
+      }
+    ],
+    "total_usd": 5000.0
+  },
+  "truth": {
+    "is_exception": true,
+    "exception_type": "late_submission",
+    "expected_findings": [
+      "payment_window"
+    ]
+  },
+  "render": {
+    "contract_layout": "contract_a",
+    "invoice_layout": "invoice_a",
+    "scanned": false,
+    "rate_in_words": false
+  },
+  "split": "test"
+}

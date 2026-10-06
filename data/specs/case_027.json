@@ -1,0 +1,57 @@
+{
+  "case_id": "case_027",
+  "defect": "vendor_name_variant",
+  "contract": {
+    "creator_name": "Jia Wen Lim",
+    "contract_id": "MC-2026-8757",
+    "rate_usd": 6000.0,
+    "deliverables": [
+      {
+        "type": "static_post",
+        "count": 2
+      },
+      {
+        "type": "ugc_video",
+        "count": 2
+      }
+    ],
+    "deliverable_count": 4,
+    "usage_window_start": "2026-04-06",
+    "usage_window_end": "2026-07-05",
+    "payment_terms_days": 60
+  },
+  "invoice": {
+    "vendor_name": "Lumen Studio LLC",
+    "invoice_number": "JWL-972",
+    "invoice_date": "2026-04-16",
+    "contract_reference": "MC-2026-8757",
+    "line_items": [
+      {
+        "description": "Static in-feed post",
+        "quantity": 2,
+        "unit_price": 1000.0,
+        "amount": 2000.0
+      },
+      {
+        "description": "UGC video asset",
+        "quantity": 2,
+        "unit_price": 2000.0,
+        "amount": 4000.0
+      }
+    ],
+    "total_usd": 6000.0,
+    "billing_on_behalf_of": "Jia Wen Lim"
+  },
+  "truth": {
+    "is_exception": false,
+    "exception_type": null,
+    "expected_findings": []
+  },
+  "render": {
+    "contract_layout": "contract_a",
+    "invoice_layout": "invoice_a",
+    "scanned": true,
+    "rate_in_words": false
+  },
+  "split": "dev"
+}

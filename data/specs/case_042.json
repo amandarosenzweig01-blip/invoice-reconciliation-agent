@@ -1,0 +1,47 @@
+{
+  "case_id": "case_042",
+  "defect": "vendor_name_variant",
+  "contract": {
+    "creator_name": "Grace Oyelaran",
+    "contract_id": "MC-2026-5569",
+    "rate_usd": 2000.0,
+    "deliverables": [
+      {
+        "type": "ugc_video",
+        "count": 1
+      }
+    ],
+    "deliverable_count": 1,
+    "usage_window_start": "2026-07-23",
+    "usage_window_end": "2027-01-19",
+    "payment_terms_days": 45
+  },
+  "invoice": {
+    "vendor_name": "Onyx Partners LLC",
+    "invoice_number": "GO-536",
+    "invoice_date": "2026-08-05",
+    "contract_reference": "MC-2026-5569",
+    "line_items": [
+      {
+        "description": "UGC video asset",
+        "quantity": 1,
+        "unit_price": 2000.0,
+        "amount": 2000.0
+      }
+    ],
+    "total_usd": 2000.0,
+    "billing_on_behalf_of": "Grace Oyelaran"
+  },
+  "truth": {
+    "is_exception": false,
+    "exception_type": null,
+    "expected_findings": []
+  },
+  "render": {
+    "contract_layout": "contract_c",
+    "invoice_layout": "invoice_b",
+    "scanned": false,
+    "rate_in_words": false
+  },
+  "split": "test"
+}

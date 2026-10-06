@@ -1,0 +1,58 @@
+{
+  "case_id": "case_039",
+  "defect": "late_invoice",
+  "contract": {
+    "creator_name": "Nadia Petrov",
+    "contract_id": "MC-2026-7469",
+    "rate_usd": 3500.0,
+    "deliverables": [
+      {
+        "type": "ugc_video",
+        "count": 1
+      },
+      {
+        "type": "story",
+        "count": 3
+      }
+    ],
+    "deliverable_count": 4,
+    "usage_window_start": "2026-01-22",
+    "usage_window_end": "2026-07-21",
+    "payment_terms_days": 45
+  },
+  "invoice": {
+    "vendor_name": "Nadia Petrov",
+    "invoice_number": "NP-972",
+    "invoice_date": "2026-11-17",
+    "contract_reference": "MC-2026-7469",
+    "line_items": [
+      {
+        "description": "UGC video asset",
+        "quantity": 1,
+        "unit_price": 2000.0,
+        "amount": 2000.0
+      },
+      {
+        "description": "Instagram story frame",
+        "quantity": 3,
+        "unit_price": 500.0,
+        "amount": 1500.0
+      }
+    ],
+    "total_usd": 3500.0
+  },
+  "truth": {
+    "is_exception": true,
+    "exception_type": "late_submission",
+    "expected_findings": [
+      "payment_window"
+    ]
+  },
+  "render": {
+    "contract_layout": "contract_b",
+    "invoice_layout": "invoice_b",
+    "scanned": true,
+    "rate_in_words": false
+  },
+  "split": "dev"
+}

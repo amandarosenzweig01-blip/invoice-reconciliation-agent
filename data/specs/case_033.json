@@ -1,0 +1,56 @@
+{
+  "case_id": "case_033",
+  "defect": "clean",
+  "contract": {
+    "creator_name": "Ava Reyes",
+    "contract_id": "MC-2026-3450",
+    "rate_usd": 2000.0,
+    "deliverables": [
+      {
+        "type": "story",
+        "count": 2
+      },
+      {
+        "type": "static_post",
+        "count": 1
+      }
+    ],
+    "deliverable_count": 3,
+    "usage_window_start": "2026-07-28",
+    "usage_window_end": "2026-11-25",
+    "payment_terms_days": 30
+  },
+  "invoice": {
+    "vendor_name": "Ava Reyes",
+    "invoice_number": "AR-136",
+    "invoice_date": "2026-08-09",
+    "contract_reference": "MC-2026-3450",
+    "line_items": [
+      {
+        "description": "Instagram story frame",
+        "quantity": 2,
+        "unit_price": 500.0,
+        "amount": 1000.0
+      },
+      {
+        "description": "Static in-feed post",
+        "quantity": 1,
+        "unit_price": 1000.0,
+        "amount": 1000.0
+      }
+    ],
+    "total_usd": 2000.0
+  },
+  "truth": {
+    "is_exception": false,
+    "exception_type": null,
+    "expected_findings": []
+  },
+  "render": {
+    "contract_layout": "contract_c",
+    "invoice_layout": "invoice_b",
+    "scanned": false,
+    "rate_in_words": false
+  },
+  "split": "test"
+}

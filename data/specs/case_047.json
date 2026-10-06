@@ -1,0 +1,56 @@
+{
+  "case_id": "case_047",
+  "defect": "clean",
+  "contract": {
+    "creator_name": "Hana Park",
+    "contract_id": "MC-2026-8112",
+    "rate_usd": 6000.0,
+    "deliverables": [
+      {
+        "type": "static_post",
+        "count": 2
+      },
+      {
+        "type": "ugc_video",
+        "count": 2
+      }
+    ],
+    "deliverable_count": 4,
+    "usage_window_start": "2026-02-28",
+    "usage_window_end": "2026-05-29",
+    "payment_terms_days": 60
+  },
+  "invoice": {
+    "vendor_name": "Hana Park",
+    "invoice_number": "HP-509",
+    "invoice_date": "2026-04-06",
+    "contract_reference": "MC-2026-8112",
+    "line_items": [
+      {
+        "description": "Static in-feed post",
+        "quantity": 2,
+        "unit_price": 1000.0,
+        "amount": 2000.0
+      },
+      {
+        "description": "UGC video asset",
+        "quantity": 2,
+        "unit_price": 2000.0,
+        "amount": 4000.0
+      }
+    ],
+    "total_usd": 6000.0
+  },
+  "truth": {
+    "is_exception": false,
+    "exception_type": null,
+    "expected_findings": []
+  },
+  "render": {
+    "contract_layout": "contract_b",
+    "invoice_layout": "invoice_c",
+    "scanned": false,
+    "rate_in_words": false
+  },
+  "split": "test"
+}

@@ -1,0 +1,58 @@
+{
+  "case_id": "case_017",
+  "defect": "rate_overcharge",
+  "contract": {
+    "creator_name": "Mira Chen",
+    "contract_id": "MC-2026-8134",
+    "rate_usd": 2500.0,
+    "deliverables": [
+      {
+        "type": "static_post",
+        "count": 1
+      },
+      {
+        "type": "reel",
+        "count": 1
+      }
+    ],
+    "deliverable_count": 2,
+    "usage_window_start": "2026-04-19",
+    "usage_window_end": "2026-07-18",
+    "payment_terms_days": 45
+  },
+  "invoice": {
+    "vendor_name": "Mira Chen",
+    "invoice_number": "MC-943",
+    "invoice_date": "2026-05-13",
+    "contract_reference": "MC-2026-8134",
+    "line_items": [
+      {
+        "description": "Static in-feed post",
+        "quantity": 1,
+        "unit_price": 1000.0,
+        "amount": 1000.0
+      },
+      {
+        "description": "Instagram reel",
+        "quantity": 1,
+        "unit_price": 1991.78,
+        "amount": 1991.78
+      }
+    ],
+    "total_usd": 2991.78
+  },
+  "truth": {
+    "is_exception": true,
+    "exception_type": "rate_overcharge",
+    "expected_findings": [
+      "rate_overcharge"
+    ]
+  },
+  "render": {
+    "contract_layout": "contract_b",
+    "invoice_layout": "invoice_c",
+    "scanned": false,
+    "rate_in_words": false
+  },
+  "split": "dev"
+}

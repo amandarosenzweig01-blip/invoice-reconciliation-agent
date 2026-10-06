@@ -1,0 +1,56 @@
+{
+  "case_id": "case_048",
+  "defect": "rate_in_words",
+  "contract": {
+    "creator_name": "Simone Okafor",
+    "contract_id": "MC-2026-9988",
+    "rate_usd": 3000.0,
+    "deliverables": [
+      {
+        "type": "static_post",
+        "count": 1
+      },
+      {
+        "type": "ugc_video",
+        "count": 1
+      }
+    ],
+    "deliverable_count": 2,
+    "usage_window_start": "2026-07-05",
+    "usage_window_end": "2026-10-03",
+    "payment_terms_days": 30
+  },
+  "invoice": {
+    "vendor_name": "Simone Okafor",
+    "invoice_number": "SO-529",
+    "invoice_date": "2026-08-01",
+    "contract_reference": "MC-2026-9988",
+    "line_items": [
+      {
+        "description": "Static in-feed post",
+        "quantity": 1,
+        "unit_price": 1000.0,
+        "amount": 1000.0
+      },
+      {
+        "description": "UGC video asset",
+        "quantity": 1,
+        "unit_price": 2000.0,
+        "amount": 2000.0
+      }
+    ],
+    "total_usd": 3000.0
+  },
+  "truth": {
+    "is_exception": false,
+    "exception_type": null,
+    "expected_findings": []
+  },
+  "render": {
+    "contract_layout": "contract_b",
+    "invoice_layout": "invoice_a",
+    "scanned": false,
+    "rate_in_words": true
+  },
+  "split": "test"
+}

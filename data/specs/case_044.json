@@ -1,0 +1,56 @@
+{
+  "case_id": "case_044",
+  "defect": "rate_in_words",
+  "contract": {
+    "creator_name": "Noor Haddad",
+    "contract_id": "MC-2026-1167",
+    "rate_usd": 5000.0,
+    "deliverables": [
+      {
+        "type": "static_post",
+        "count": 2
+      },
+      {
+        "type": "reel",
+        "count": 2
+      }
+    ],
+    "deliverable_count": 4,
+    "usage_window_start": "2026-04-18",
+    "usage_window_end": "2026-10-15",
+    "payment_terms_days": 60
+  },
+  "invoice": {
+    "vendor_name": "Noor Haddad",
+    "invoice_number": "NH-732",
+    "invoice_date": "2026-05-02",
+    "contract_reference": "MC-2026-1167",
+    "line_items": [
+      {
+        "description": "Static in-feed post",
+        "quantity": 2,
+        "unit_price": 1000.0,
+        "amount": 2000.0
+      },
+      {
+        "description": "Instagram reel",
+        "quantity": 2,
+        "unit_price": 1500.0,
+        "amount": 3000.0
+      }
+    ],
+    "total_usd": 5000.0
+  },
+  "truth": {
+    "is_exception": false,
+    "exception_type": null,
+    "expected_findings": []
+  },
+  "render": {
+    "contract_layout": "contract_b",
+    "invoice_layout": "invoice_c",
+    "scanned": false,
+    "rate_in_words": true
+  },
+  "split": "test"
+}
